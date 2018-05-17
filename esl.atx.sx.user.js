@@ -1,10 +1,13 @@
 // ==UserScript==
 // @name         ESL Facebook stream | ATX.sx
-// @version      0.1
+// @namespace    https://esl.atx.sx/
+// @version      0.1.1
 // @description  try to take over the world!
-// @author       You
+// @author       Ruben
 // @match        https://esl.atx.sx/
 // @grant        none
+// @run-at       document-end
+// @updateURL    https://github.com/rub1/userscripts/raw/master/esl.atx.sx.user.js
 // ==/UserScript==
 
 (function() {var css = [
