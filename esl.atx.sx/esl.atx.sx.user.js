@@ -14,6 +14,7 @@
 	"@namespace url(http://www.w3.org/1999/xhtml);",
 	"    body {background-color: #000 !important; color: #fff;}",
 	"    .dash-video-player {width: 100%;}",
+	"    .container {max-width: 100%;}",
     "    .tabs-section, .additions-panel, .footer-area {display: none;}"
 ].join("\n");
 if (typeof GM_addStyle != "undefined") {
