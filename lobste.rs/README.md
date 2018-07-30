@@ -1,5 +1,5 @@
-# Lobster.rs
-
+# Lobste.rs
+lobste.rs
 ## Solarized
 
 ![Preview of the script](https://i.imgur.com/tnXVUmX.png)
