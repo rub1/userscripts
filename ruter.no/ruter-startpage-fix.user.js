@@ -6,7 +6,8 @@
 // @author       Ruben
 // @match        https://ruter.no/
 // @grant        none
-// @updateURL    https://github.com/rub1/ruter-startpage-fix/raw/master/ruter-startpage-fix.user.js
+// @updateURL    https://github.com/rub1/userscripts/raw/master/ruter-startpage-fix.user.js
+
 // ==/UserScript==
 
 (function() {

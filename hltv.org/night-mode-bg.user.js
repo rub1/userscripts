@@ -7,7 +7,7 @@
 // @match        https://www.hltv.org/*
 // @grant        none
 // @run-at       document-end
-// @updateURL    https://github.com/rub1/hltv-stream-url-fix/raw/master/night-mode-bg.user.js
+// @updateURL    https://github.com/rub1/userscripts/raw/master/night-mode-bg.user.js
 // ==/UserScript==
 
 (function() {var css = [

@@ -6,7 +6,7 @@
 // @author       Ruben
 // @match        https://www.hltv.org/matches/*
 // @grant        none
-// @updateURL    https://github.com/rub1/hltv-stream-url-fix/raw/master/hltv-stream-url-fix.user.js
+// @updateURL    https://github.com/rub1/userscripts/raw/master/hltv-stream-url-fix.user.js
 // ==/UserScript==
 
 (function() {
