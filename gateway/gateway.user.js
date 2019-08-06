@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Gateway norwegian football
 // @namespace    https://gateway.mediabank.me/
-// @version      0.1
+// @version      1.0.0
 // @description  try to take over the world!
 // @author       You
 // @match        https://gateway.mediabank.me/*
@@ -10,14 +10,6 @@
 
 (function() {
     'use strict';
-
-
-    /*
-     *
-     * Checks if page url includes /#/setupschedule, if not return :)
-     *
-     */
-//    if ( ! /#\/setupschedule.*/.test(location.hash) )  return;
 
     // Your code here...
 
@@ -81,6 +73,8 @@
              * Add event listeners to check if the selected option is the on in our league array
              *
              */
+
+
             liveplayer.addEventListener('change', function (e) {
                 if (e.target.options[e.target.options.selectedIndex].text.includes(livePlayerName)) {
                     liveplayer.style.background = "lightgreen";
@@ -107,7 +101,14 @@
         }
     }
 
-    // Vent 1 sec med å kjøre scriptet slik at all javascript får kjørt ferdig i bakgrunnen
+
+    /*
+     *
+     * Wait some extra time to let the webpage finish loading content and then go through our league array and run the script
+     *
+     */
+
+
     const delay = ms => new Promise(res => setTimeout(res, ms));
 
     const init = async () => {
@@ -122,6 +123,14 @@
     if ( /#\/setupschedule.*/.test(location.hash) ) {
         init();
     }
+
+
+    /*
+     *
+     * Check if we have navigated to a new url and check if taht url is what we are after, if so load init
+     *
+     */
+
 
     var oldLocation = location.href;
     setInterval(function() {
