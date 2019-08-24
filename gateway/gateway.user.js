@@ -30,7 +30,9 @@
 
 
 	function selectedFormItemCorrect(formElement, correctName) {
-		if (formElement.options[formElement.options.selectedIndex].innerText.includes(correctName)) {
+		if (formElement.options.selectedIndex === 0) {
+            formElement.style.background = "lightskyblue";
+        } else if (formElement.options[formElement.options.selectedIndex].innerText.includes(correctName)) {
 			formElement.style.background = "lightgreen";
 		} else {
 			formElement.style.background = "red";
@@ -47,7 +49,9 @@
 
 	function checksFormOptionName(formElement, correctName) {
 		formElement.addEventListener('change', function (e) {
-			if (e.target.options[e.target.options.selectedIndex].text.includes(correctName)) {
+			if (formElement.options.selectedIndex == 0) {
+                formElement.style.background = "lightblue";
+            } else if (e.target.options[e.target.options.selectedIndex].text.includes(correctName)) {
 				formElement.style.background = "lightgreen";
 			} else {
 				formElement.style.background = "red";
@@ -84,17 +88,9 @@
 			 */
 
 
-			if (selectedPlayer > 0) {
-				selectedFormItemCorrect(liveplayer, livePlayerName)
-			}
-
-			if (selectedRecorder > 0) {
-				selectedFormItemCorrect(scheduleRecorderId, recorderName)
-			}
-
-			if (selectedRecordingProfile > 0) {
-				selectedFormItemCorrect(scheduleRecordingProfile, recordingProfileName)
-			}
+			selectedFormItemCorrect(liveplayer, livePlayerName)
+            selectedFormItemCorrect(scheduleRecorderId, recorderName)
+            selectedFormItemCorrect(scheduleRecordingProfile, recordingProfileName)
 
 
 			/*
@@ -150,25 +146,16 @@
 		 *
 		 */
 
-		if (selectedRecorder > 0) {
-			if (is360) {
-				selectedFormItemCorrect(scheduleRecorderId, recorderName360)
-			} else {
-				selectedFormItemCorrect(scheduleRecorderId, recorderName)
-			}
-		}
 
-		if (selectedRecordingProfile > 0) {
-			selectedFormItemCorrect(scheduleRecordingProfile, recordingProfileName)
-		}
-
-		if (selectedSubFeedSource > 0 && is360) {
-			selectedFormItemCorrect(subFeedSource, subFeedSource360Name)
-		}
-
-		if (selectedSourceType > 0 && is360) {
+        if (is360) {
+            selectedFormItemCorrect(scheduleRecorderId, recorderName360)
+            selectedFormItemCorrect(subFeedSource, subFeedSource360Name)
 			selectedFormItemCorrect(sourceType, sourceType360Name)
-		}
+        } else {
+            selectedFormItemCorrect(scheduleRecorderId, recorderName)
+        }
+
+        selectedFormItemCorrect(scheduleRecordingProfile, recordingProfileName)
 
 
 		/*
