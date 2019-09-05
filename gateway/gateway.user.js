@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Gateway security
 // @namespace    https://gateway.mediabank.me/
-// @version      1.1.4
+// @version      1.1.5
 // @description  try to take over the world!
 // @author       You
 // @match        https://gateway.mediabank.me/*
@@ -30,9 +30,11 @@
 
 
 	function selectedFormItemCorrect(formElement, correctName) {
-		if (formElement.options.selectedIndex === 0 || formElement.options.selectedIndex == -1) {
-            formElement.style.background = "lightskyblue";
-        } else if (formElement.options[formElement.options.selectedIndex].innerText.includes(correctName)) {
+		if (formElement.options.selectedIndex === 0 && formElement.options[formElement.options.selectedIndex].innerText.includes("Multilateral")) {
+			formElement.style.background = "lightgreen";
+		} else if (formElement.options.selectedIndex === 0 || formElement.options.selectedIndex == -1) {
+			formElement.style.background = "lightskyblue";
+		} else if (formElement.options[formElement.options.selectedIndex].innerText.includes(correctName)) {
 			formElement.style.background = "lightgreen";
 		} else {
 			formElement.style.background = "red";
@@ -52,8 +54,9 @@
 			if (e.target.options[e.target.options.selectedIndex].text.includes(correctName)) {
 				formElement.style.background = "lightgreen";
 			} else if (formElement.options.selectedIndex == 0 || formElement.options.selectedIndex == -1 ) {
-                formElement.style.background = "lightskyblue";
-            } else {
+				formElement.style.background = "lightskyblue";
+				console.log("go blue 2");
+			} else {
 				formElement.style.background = "red";
 			}
 		});
@@ -90,9 +93,9 @@
 
 
 			selectedFormItemCorrect(liveplayer, livePlayerName)
-            selectedFormItemCorrect(scheduleRecorderId, recorderName)
-            selectedFormItemCorrect(scheduleRecordingProfile, recordingProfileName)
-            selectedFormItemCorrect(feedSource, "Multilateral")
+			selectedFormItemCorrect(scheduleRecorderId, recorderName)
+			selectedFormItemCorrect(scheduleRecordingProfile, recordingProfileName)
+			selectedFormItemCorrect(feedSource, "Multilateral")
 
 
 			/*
@@ -105,7 +108,7 @@
 			checksFormOptionName(liveplayer, livePlayerName)
 			checksFormOptionName(scheduleRecorderId, recorderName)
 			checksFormOptionName(scheduleRecordingProfile, recordingProfileName)
-            checksFormOptionName(feedSource, "Multilateral")
+			checksFormOptionName(feedSource, "Multilateral")
 		}
 	}
 
