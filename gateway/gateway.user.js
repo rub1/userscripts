@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Gateway security
 // @namespace    https://gateway.mediabank.me/
-// @version      1.1.3
+// @version      1.1.4
 // @description  try to take over the world!
 // @author       You
 // @match        https://gateway.mediabank.me/*
@@ -16,7 +16,7 @@
 	console.log("running gateway userscript");
 
 	// ["league name", "recorder name", "live player name", "recording profile name"]
-	var myLeagues = [["Norwegian", "EVS MCR", "Discovery","FM-General Ingest"],["UEFA", "EVS MCR", "UEFA", "UEFA-General Ingest no proxy"],["European", "EVS MCR", "UEFA", "UEFA-General Ingest no proxy"]];
+	var myLeagues = [["Norwegian", "EVS MCR", "Discovery","FM-General Ingest"],["UEFA", "EVS MCR", "UEFA", "UEFA-General Ingest no proxy"],["European", "EVS MCR", "UEFA", "UEFA-General Ingest no proxy"],["Friendly", "EVS MCR", "UEFA", "UEFA-General Ingest no proxy"]];
 
 	// If script runs, make the navbar green to verify our script is active
 	document.querySelectorAll(".navbar")[0].setAttribute('style', 'background: #28a745 !important');
