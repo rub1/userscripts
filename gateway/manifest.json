@@ -1,16 +1,16 @@
 {
-  "manifest_version": 2,
-  "name": "Gateway security",
-  "short_name": "gatesecurity",
-  "description": "Makes it harder to fuckup in gateway",
-  "version": "1.1.5",
-  "permissions": ["https://gateway.mediabank.me/*"],
-  "minimum_chrome_version" : "29",
-  "content_scripts": [{
-     "matches": ["https://gateway.mediabank.me/*"],
-     "js": ["gateway.user.js"]
-   }],
-  "web_accessible_resources": [
-    "gateway.user.js"
-  ]
+	"manifest_version": 2,
+	"name": "Gateway security",
+	"short_name": "gatesecurity",
+	"description": "Makes it harder to fuckup in gateway",
+	"version": "1.1.6",
+	"permissions": ["https://gateway.mediabank.me/*"],
+	"minimum_chrome_version" : "29",
+	"content_scripts": [{
+		 "matches": ["https://gateway.mediabank.me/*"],
+		 "js": ["gateway.user.js"]
+	 }],
+	"web_accessible_resources": [
+		"gateway.user.js"
+	]
 }
