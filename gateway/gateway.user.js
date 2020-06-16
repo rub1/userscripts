@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Gateway security
 // @namespace    https://gateway.mediabank.me/
-// @version      1.1.5
+// @version      1.1.6
 // @description  try to take over the world!
 // @author       You
 // @match        https://gateway.mediabank.me/*
