@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        New script - nentsportbooking.com
+// @name        Production sidebar - nentsportbooking.com
 // @namespace   Violentmonkey Scripts
 // @match       https://www.nentsportbooking.com/productions/overview
 // @grant       none
