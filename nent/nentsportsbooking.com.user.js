@@ -37,12 +37,6 @@
 			newIdLink.innerHTML = feedId;
 			feedIdCell.replaceWith(newIdLink);
 		}
-
-		// make production sidebar wider
-		
-		
-		document.getElementsByClassName("book-sidebar")[0].style.width="400px";
-		document.getElementsByClassName("book-sidebar-sticky")[0].style.width="400px";
 		
 		console.log("Done running custom script");
 	}, delayInMilliseconds);
