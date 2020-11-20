@@ -19,14 +19,15 @@
 			feedListLength,
 			feedIdCell,
 			feedId,
-			newIdLink;
+			newIdLink.
+			sidebar;
 
 	setTimeout(function() {
 		console.log("Running after 5 sec delay");
 
 		feedList = document.getElementsByClassName("table table-hover")[0];
 		feedListLength = document.getElementsByClassName("book-filter book-bottom-sticky")[0].children[2].children[0].children[1].innerText;
-
+		
 		for (var i = 1; i < feedListLength+1; i++) {
 			feedIdCell = feedList.rows[i].cells[1].children[0];
 			feedId = feedIdCell.innerHTML;
@@ -37,6 +38,12 @@
 			feedIdCell.replaceWith(newIdLink);
 		}
 
+		// make production sidebar wider
+		
+		
+		document.getElementsByClassName("book-sidebar")[0].style.width="400px";
+		document.getElementsByClassName("book-sidebar-sticky")[0].style.width="400px";
+		
 		console.log("Done running custom script");
 	}, delayInMilliseconds);
 })();
