@@ -6,6 +6,7 @@
 // @version     1.0
 // @author      -
 // @description 8/15/2022, 4:03:50 PM
+// @updateURL   https://raw.githubusercontent.com/rubenleikarnes/userscripts/master/dvbook.no/dvbook.no.userscript.js
 // ==/UserScript==
 
 (function() {
