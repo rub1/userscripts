@@ -3,7 +3,7 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://dvbook.no/dvb3/tm_editor.asp
 // @grant       none
-// @version     1.0.1
+// @version     1.0.2
 // @author      -
 // @description 8/27/2022, 6:23:27 PM
 // @updateURL   https://raw.githubusercontent.com/rubenleikarnes/userscripts/master/dvbook.no/dvbook-tm.userscript.js
@@ -32,12 +32,6 @@
         tmTime[i].style.background = "red"
       }
     }
-
-    // make production sidebar wider
-
-
-    document.getElementsByClassName("book-sidebar")[0].style.width="400px";
-    document.getElementsByClassName("book-sidebar-sticky")[0].style.width="400px";
 
     console.log("Done running custom script");
   }, delayInMilliseconds);
