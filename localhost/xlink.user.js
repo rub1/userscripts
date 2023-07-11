@@ -7,6 +7,7 @@
 // @match        http://10.1.139.202/
 // @grant        none
 // @updateURL    https://github.com/rubenleikarnes/userscripts/raw/master/localhost/xlink.user.js
+// @downloadURL    https://github.com/rubenleikarnes/userscripts/raw/master/localhost/xlink.user.js
 // ==/UserScript==
 
 (function() {
