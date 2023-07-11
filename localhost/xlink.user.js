@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         videoxlink rx/tx background
-// @description  sets background color of x8 xlinks
+// @description  sets background color of x8 xlinks and open sidebar
 // @version      0.1
 // @author       ruben
 // @match        http://10.1.139.201/
 // @match        http://10.1.139.202/
 // @grant        none
+// @updateURL    https://github.com/rubenleikarnes/userscripts/raw/master/localhost/xlink.user.js
 // ==/UserScript==
 
 (function() {
