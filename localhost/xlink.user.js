@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         videoxlink rx/tx background
 // @description  sets background color of x8 xlinks and open sidebar
-// @version      0.1
+// @version      0.1.1
 // @author       ruben
 // @match        http://10.1.139.201/
 // @match        http://10.1.139.202/
