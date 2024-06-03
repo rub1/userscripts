@@ -3,7 +3,7 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://console.signiant.com/mediaShuttle/transfers*
 // @grant       none
-// @version     1.2
+// @version     1.3
 // @author      -
 // @updateURL   https://github.com/rubenleikarnes/userscripts/raw/master/signiant.com/signiant-media-shuttle-zoom.user.js
 // ==/UserScript==
@@ -17,20 +17,10 @@
   setTimeout(function() {
     console.log("Running after %S ms delay"), delayInMilliseconds;
 
-    /*
-    nav top = MuiPaper-root-133
-      display: flex -> none
-    nav left = Muiroot-237
-      width: 240px -> 0
-      display: block -> none
-    nav top behind = jss298
-      height: 56px -> 0
-    */
-
     let navTop = document.querySelector(".MuiPaper-root-133")
     let navLeft = document.querySelector(".MuiDrawer-root-237")
     let wrapper = document.querySelector(".jss300")
-    let controlPanel = document.querySelector("#controlpanel")
+    let controlPanel = document.getElementById("#controlpanel")
     let btn = document.createElement("button")
     let isZoomed = false
 
