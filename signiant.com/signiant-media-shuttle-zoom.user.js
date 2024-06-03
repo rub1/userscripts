@@ -3,7 +3,7 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://console.signiant.com/mediaShuttle/transfers*
 // @grant       none
-// @version     1.4
+// @version     1.5
 // @author      -
 // @updateURL   https://github.com/rubenleikarnes/userscripts/raw/master/signiant.com/signiant-media-shuttle-zoom.user.js
 // ==/UserScript==
@@ -20,7 +20,7 @@
     let navTop = document.querySelector(".MuiPaper-root-133")
     let navLeft = document.querySelector(".MuiDrawer-root-237")
     let wrapper = document.querySelector(".jss300")
-    let contentPanel = document.querySelector("#contentPanel")
+    let contentPanel = document.querySelector(".jss299")
     let btn = document.createElement("button")
     let isZoomed = false
 
