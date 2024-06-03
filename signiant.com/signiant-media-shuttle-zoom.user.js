@@ -3,7 +3,7 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://console.signiant.com/mediaShuttle/transfers*
 // @grant       none
-// @version     1.0
+// @version     1.1
 // @author      -
 // @updateURL   https://github.com/rubenleikarnes/userscripts/raw/master/signiant.com/signiant-media-shuttle-zoom.user.js
 // ==/UserScript==
@@ -28,9 +28,8 @@
     */
 
     let navTop = document.querySelector(".MuiPaper-root-133")
-    let navLeft = document.querySelector(".MuiPaper-root-237")
-    let navTopBehind = document.querySelector(".jss298")
-    let wrapper = document.querySelector(".jss300")
+    let navLeft = document.querySelector(".MuiDrawer-root-237")
+    let controlPanel = document.querySelector("#controlpanel")
     let btn = document.createElement("button")
     let isZoomed = false
 
@@ -41,14 +40,16 @@
         navTop.style.display = "none"
         navLeft.style.display = "none"
         navLeft.style.width = "0"
-        navTopBehind.style.height = "0"
+        controlPanel.style.height = "100vh"
+        controlPanel.style.marginTop = "-56px"
 
         isZoomed = true
       } else if (isZoomed) {
         navTop.style.display = "flex"
         navLeft.style.display = "block"
         navLeft.style.width = "240px"
-        navTopBehind.style.height = "56px"
+        controlPanel.style.height = "calc(100vh - 56px)"
+        controlPanel.style.marginTop = "0"
 
         isZoomed = false
       }
@@ -69,7 +70,7 @@
       mapZoom()
     });
 
-    wrapper.appendChild(btn)
+    controlPanel.appendChild(btn)
 
   }, delayInMilliseconds);
 })();
