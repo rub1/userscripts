@@ -4,7 +4,7 @@
 // @match       https://console.signiant.com/jet/dashboard*
 // @grant       none
 // @version     1.1
-// @author      -
+// @author      Ruben Leikarnes
 // @updateURL   https://github.com/rubenleikarnes/userscripts/raw/master/signiant.com/signiant-map-zoom.user.js
 // ==/UserScript==
 
@@ -54,9 +54,5 @@
     });
 
     sMap.appendChild(btn)
-
-    console.log("RUBEN")
-    console.log(sMap)
-
   }, delayInMilliseconds);
 })();
