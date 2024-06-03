@@ -20,7 +20,7 @@
     let navTop = document.querySelector(".MuiPaper-root-133")
     let navLeft = document.querySelector(".MuiDrawer-root-237")
     let wrapper = document.querySelector(".jss300")
-    let controlPanel = document.getElementById("#controlpanel")
+    let contentPanel = document.querySelector("#contentPanel")
     let btn = document.createElement("button")
     let isZoomed = false
 
@@ -31,16 +31,16 @@
         navTop.style.display = "none"
         navLeft.style.display = "none"
         navLeft.style.width = "0"
-        controlPanel.style.height = "100vh"
-        controlPanel.style.marginTop = "-56px"
+        contentPanel.style.height = "100vh"
+        contentPanel.style.marginTop = "-56px"
 
         isZoomed = true
       } else if (isZoomed) {
         navTop.style.display = "flex"
         navLeft.style.display = "block"
         navLeft.style.width = "240px"
-        controlPanel.style.height = "calc(100vh - 56px)"
-        controlPanel.style.marginTop = "0"
+        contentPanel.style.height = "calc(100vh - 56px)"
+        contentPanel.style.marginTop = "0"
 
         isZoomed = false
       }
