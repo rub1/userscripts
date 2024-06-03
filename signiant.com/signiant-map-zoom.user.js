@@ -3,9 +3,9 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://console.signiant.com/jet/dashboard*
 // @grant       none
-// @version     1.0
+// @version     1.1
 // @author      -
-// @description 6/3/2024, 11:35:57 AM
+// @updateURL   https://github.com/rubenleikarnes/userscripts/raw/master/signiant.com/signiant-map-zoom.user.js
 // ==/UserScript==
 
 
