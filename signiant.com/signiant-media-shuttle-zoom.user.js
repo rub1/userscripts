@@ -3,7 +3,7 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://console.signiant.com/mediaShuttle/transfers*
 // @grant       none
-// @version     1.5
+// @version     1.6
 // @author      -
 // @updateURL   https://github.com/rubenleikarnes/userscripts/raw/master/signiant.com/signiant-media-shuttle-zoom.user.js
 // ==/UserScript==
@@ -15,7 +15,7 @@
   let delayInMilliseconds = 10000;
 
   setTimeout(function() {
-    console.log("Running after %S ms delay"), delayInMilliseconds;
+    console.log("Running after " + delayInMilliseconds + " ms delay")
 
     let navTop = document.querySelector(".MuiPaper-root-133")
     let navLeft = document.querySelector(".MuiDrawer-root-237")

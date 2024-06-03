@@ -3,7 +3,7 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://console.signiant.com/jet/dashboard*
 // @grant       none
-// @version     1.1
+// @version     1.2
 // @author      Ruben Leikarnes
 // @updateURL   https://github.com/rubenleikarnes/userscripts/raw/master/signiant.com/signiant-map-zoom.user.js
 // ==/UserScript==
@@ -15,7 +15,7 @@
   let delayInMilliseconds = 10000;
 
   setTimeout(function() {
-    console.log("Running after %S ms delay"), delayInMilliseconds;
+    console.log("Running after " + delayInMilliseconds + " ms delay")
 
     let sMap = document.querySelector(".markercluster-map")
     let btn = document.createElement("button")
