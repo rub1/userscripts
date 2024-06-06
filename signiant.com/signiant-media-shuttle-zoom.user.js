@@ -3,7 +3,7 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://console.signiant.com/mediaShuttle/transfers*
 // @grant       none
-// @version     1.6
+// @version     1.7
 // @author      -
 // @updateURL   https://github.com/rubenleikarnes/userscripts/raw/master/signiant.com/signiant-media-shuttle-zoom.user.js
 // ==/UserScript==
@@ -22,6 +22,7 @@
     let wrapper = document.querySelector(".jss300")
     let contentPanel = document.querySelector(".jss299")
     let btn = document.createElement("button")
+    let title = document.createElement("h2")
     let isZoomed = false
 
     function mapZoom() {
@@ -55,6 +56,13 @@
     btn.style.cursor = "nesw-resize"
     btn.innerHTML = "<->"
 
+    title.style.position = "absolute"
+    title.style.zIndex = "9999"
+    title.style.right = "410px"
+    title.style.top = "-32px"
+    title.style.color = "#eee"
+    title.style.fontSize = "32px"
+    title.innerHTML = "Media Shuttle Deliveries"
 
     btn.addEventListener("click", function() {
       console.log("zooming")
@@ -62,6 +70,7 @@
     });
 
     wrapper.appendChild(btn)
+    wrapper.appendChild(title)
 
   }, delayInMilliseconds);
 })();

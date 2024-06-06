@@ -3,7 +3,7 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://console.signiant.com/jet/dashboard*
 // @grant       none
-// @version     1.2
+// @version     1.3
 // @author      Ruben Leikarnes
 // @updateURL   https://github.com/rubenleikarnes/userscripts/raw/master/signiant.com/signiant-map-zoom.user.js
 // ==/UserScript==
@@ -19,6 +19,7 @@
 
     let sMap = document.querySelector(".markercluster-map")
     let btn = document.createElement("button")
+    let title = document.createElement("h2")
     let isZoomed = false
 
     function mapZoom() {
@@ -47,6 +48,13 @@
     btn.style.cursor = "nesw-resize"
     btn.innerHTML = "<->"
 
+    title.style.position = "absolute"
+    title.style.zIndex = "9999"
+    title.style.right = "430px"
+    title.style.top = "-32px"
+    title.style.color = "#eee"
+    title.style.fontSize = "32px"
+    title.innerHTML = "Jet Deliveries"
 
     btn.addEventListener("click", function() {
       console.log("zooming")
@@ -54,5 +62,6 @@
     });
 
     sMap.appendChild(btn)
+    sMap.appendChild(title)
   }, delayInMilliseconds);
 })();
